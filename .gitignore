@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 .idea/*
 *.iml
+=======
+*.iml
+.idea/
+.DS_Store
+>>>>>>> 5b152e7b50982520de166fd7510e69a99d1b7e72
