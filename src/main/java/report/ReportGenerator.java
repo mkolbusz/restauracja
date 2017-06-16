@@ -5,8 +5,8 @@ import config.Bucket;
 import java.util.Date;
 import java.util.List;
 
-public class RaportGenerator {
-    public String generateRaport(List<Bucket> bucketList,Date generateDate) {
+public class ReportGenerator {
+    public String generateReport(List<Bucket> bucketList, Date generateDate) {
         StringBuilder builder = new StringBuilder();
         builder.append(generateDate);
         builder.append(" Generated Report:\n");

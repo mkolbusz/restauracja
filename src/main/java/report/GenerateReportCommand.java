@@ -16,9 +16,9 @@ public class GenerateReportCommand implements Command {
     }
 
     public boolean execute() {
-        RaportGenerator raportGenerator = new RaportGenerator();
+        ReportGenerator reportGenerator = new ReportGenerator();
         Date generationDate = new Date(System.currentTimeMillis());
-        String report = raportGenerator.generateRaport(getBucketList(), generationDate);
+        String report = reportGenerator.generateReport(getBucketList(), generationDate);
         System.out.println(report);
         writeReportFile(generationDate, report);
         return true;
