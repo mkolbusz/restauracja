@@ -1,4 +1,4 @@
-package report;
+package java.report;
 
 import config.Bucket;
 import org.junit.Test;
