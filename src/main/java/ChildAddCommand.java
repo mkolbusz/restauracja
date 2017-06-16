@@ -4,12 +4,24 @@
 
 import config.BucketManager;
 import config.Type;
+import pl.edu.agh.Command;
 
 import java.util.Date;
 
-public class ChildManager {
+public class ChildAddCommand implements Command {
 
-    public void saveChild(BucketManager bucketManager) {
+    BucketManager bucketManager;
+
+    public ChildAddCommand(BucketManager bucketManager) {
+        this.bucketManager = bucketManager;
+    }
+
+    public boolean canExecute(String input) {
+        return input!=null && input.equalsIgnoreCase("c");
+    }
+
+    public boolean execute() {
         bucketManager.add(new Date(), Type.CHILD);
+        return true;
     }
 }

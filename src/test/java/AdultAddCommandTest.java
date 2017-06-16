@@ -1,4 +1,4 @@
-import config.AdultManager;
+import config.AdultAddCommand;
 import config.Bucket;
 import config.LocalMemoryDataManger;
 import org.junit.Assert;
@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by damian on 16/06/2017.
  */
-public class AdultManagerTest {
+public class AdultAddCommandTest {
     LocalMemoryDataManger dataManager;
 
     @Test
@@ -28,8 +28,8 @@ public class AdultManagerTest {
         Assert.assertNotNull(currentBucket);
         int startAdultCount = currentBucket.getAdultNumber();
 
-        AdultManager adultManager = new AdultManager();
-        adultManager.saveAdult(dataManager);
+        AdultAddCommand adultAddCommand = new AdultAddCommand(dataManager);
+        adultAddCommand.execute();
         Assert.assertTrue( currentBucket.getAdultNumber()==startAdultCount+1 );
     }
 }

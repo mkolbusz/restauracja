@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by damian on 16/06/2017.
  */
-public class ChildManagerTest {
+public class ChildAddCommandTest {
 
     LocalMemoryDataManger dataManager;
 
@@ -28,8 +28,8 @@ public class ChildManagerTest {
         Assert.assertNotNull(currentBucket);
         int startChildCount = currentBucket.getChildNumber();
 
-        ChildManager childManager = new ChildManager();
-        childManager.saveChild(dataManager);
+        ChildAddCommand childAddCommand = new ChildAddCommand(dataManager);
+        childAddCommand.execute();
         Assert.assertTrue( currentBucket.getChildNumber()==startChildCount+1 );
     }
 }
