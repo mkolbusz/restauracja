@@ -1,4 +1,4 @@
-/**
+package pl.edu.agh; /**
  * Created by damian on 16/06/2017.
  */
 

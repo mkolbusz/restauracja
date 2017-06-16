@@ -1,7 +1,9 @@
 import config.Bucket;
 import config.LocalMemoryDataManger;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.Assert;
+import pl.edu.agh.ChildAddCommand;
 
 import java.util.Date;
 import java.util.List;
@@ -13,6 +15,11 @@ public class ChildAddCommandTest {
 
     LocalMemoryDataManger dataManager;
 
+    @Before
+    public void before() {
+        dataManager = new LocalMemoryDataManger();
+        dataManager.getAllBackets().add(new Bucket(new Date(System.currentTimeMillis()), new Date(System.currentTimeMillis() + 5 * 1000 * 60), 0, 0));
+    }
     @Test
     public void testAddingChild() {
         Date currentTime = new Date();

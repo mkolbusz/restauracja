@@ -1,5 +1,7 @@
-package config;
+package pl.edu.agh;
 
+import config.BucketManager;
+import config.Type;
 import pl.edu.agh.Command;
 
 import java.util.Date;

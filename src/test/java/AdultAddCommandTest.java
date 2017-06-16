@@ -1,4 +1,5 @@
-import config.AdultAddCommand;
+import org.junit.Before;
+import pl.edu.agh.AdultAddCommand;
 import config.Bucket;
 import config.LocalMemoryDataManger;
 import org.junit.Assert;
@@ -11,7 +12,14 @@ import java.util.List;
  * Created by damian on 16/06/2017.
  */
 public class AdultAddCommandTest {
+
     LocalMemoryDataManger dataManager;
+
+    @Before
+    public void before() {
+        dataManager = new LocalMemoryDataManger();
+        dataManager.getAllBackets().add(new Bucket(new Date(System.currentTimeMillis()), new Date(System.currentTimeMillis() + 5 * 1000 * 60), 0, 0));
+    }
 
     @Test
     public void testAddingAdult() {

@@ -19,7 +19,9 @@ public class Menu {
 
         menu = new MenuItem[]{
                 new MenuItem("Wyczyść wszystkie liczniki", new ClearCountersCommand(raportManager)),
-                new MenuItem("Generuj raport", new GenerateReportCommand(raportManager))
+                new MenuItem("Generuj raport", new GenerateReportCommand(raportManager)),
+                new MenuItem("Dodaj dorosłego", new AdultAddCommand(bucketManager)),
+                new MenuItem("Dodaj dziecko", new ChildAddCommand(bucketManager))
         };
 
     }
