@@ -20,6 +20,8 @@ public class LocalMemoryDataManger implements RaportManager, BucketManager {
     }
 
     public void clearAllBackets() {
-
+        for (Bucket bucket : allBuckets) {
+            bucket.clearAll();
+        }
     }
 }

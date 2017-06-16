@@ -49,4 +49,17 @@ public class Bucket {
     public void setChildNumber(int childNumber) {
         this.childNumber = childNumber;
     }
+
+    public void clearAdults() {
+        setAdultNumber(0);
+    }
+
+    public void clearChilds() {
+        setChildNumber(0);
+    }
+
+    public void clearAll() {
+        clearAdults();
+        clearChilds();
+    }
 }
