@@ -3,7 +3,7 @@ package pl.edu.agh;
 import config.BucketManager;
 import config.RaportManager;
 
-import java.report.GenerateReportCommand;
+import pl.edu.agh.report.GenerateReportCommand;
 
 /**
  * Created by Krzysztof on 16.06.2017.

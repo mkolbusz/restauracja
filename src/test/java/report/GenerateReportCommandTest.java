@@ -1,9 +1,10 @@
-package java.report;
+package report;
 
 import config.Bucket;
 import config.RaportManager;
 import org.junit.Test;
 
+import pl.edu.agh.report.GenerateReportCommand;
 import java.util.Collections;
 import java.util.List;
 
