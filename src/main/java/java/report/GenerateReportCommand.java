@@ -1,18 +1,24 @@
-package report;
+package java.report;
 
 import config.Bucket;
+import config.RaportManager;
 import pl.edu.agh.Command;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
 public class GenerateReportCommand implements Command {
-    public String getKey() {
-        return "r";
+    private RaportManager reportManager;
+
+    public GenerateReportCommand(RaportManager reportManager) {
+        this.reportManager = reportManager;
+    }
+
+    public boolean canExecute(String input) {
+        return "r".equals(input);
     }
 
     public boolean execute() {
@@ -43,6 +49,6 @@ public class GenerateReportCommand implements Command {
     }
 
     private List<Bucket> getBucketList() {
-        return Collections.emptyList();
+        return reportManager.getAllBackets();
     }
 }
