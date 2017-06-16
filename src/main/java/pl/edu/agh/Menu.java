@@ -3,6 +3,8 @@ package pl.edu.agh;
 import config.BucketManager;
 import config.RaportManager;
 
+import java.report.GenerateReportCommand;
+
 /**
  * Created by Krzysztof on 16.06.2017.
  */
@@ -16,7 +18,8 @@ public class Menu {
         this.raportManager = raportManager;
 
         menu = new MenuItem[]{
-                new MenuItem("Wyczyść wszystkie liczniki", new ClearCountersCommand(raportManager))
+                new MenuItem("Wyczyść wszystkie liczniki", new ClearCountersCommand(raportManager)),
+                new MenuItem("Generuj raport", new GenerateReportCommand(raportManager))
         };
 
     }
