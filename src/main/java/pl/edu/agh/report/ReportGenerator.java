@@ -1,4 +1,4 @@
-package java.report;
+package pl.edu.agh.report;
 
 import config.Bucket;
 
