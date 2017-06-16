@@ -18,7 +18,7 @@ public class ClearCountersCommand implements Command {
     }
 
     public boolean execute() {
-        System.out.println("Bla");
+        System.out.println("Czyscimy liczniki: ");
         manager.clearAllBackets();
         return true;
     }

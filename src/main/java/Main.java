@@ -13,7 +13,7 @@ public class Main {
 
         LocalMemoryDataManger manager = new LocalMemoryDataManger();
 
-        Menu menu = new Menu(manager);
+        Menu menu = new Menu(manager, manager);
 
         while (true) {
             System.out.println("Enter smth");
