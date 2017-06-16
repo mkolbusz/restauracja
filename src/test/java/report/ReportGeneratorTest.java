@@ -1,8 +1,9 @@
-package java.report;
+package report;
 
 import config.Bucket;
 import org.junit.Test;
 
+import pl.edu.agh.report.ReportGenerator;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

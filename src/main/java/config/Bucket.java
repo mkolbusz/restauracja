@@ -50,6 +50,18 @@ public class Bucket {
         this.childNumber = childNumber;
     }
 
+    public void add(Date date, Type type) {
+
+        if(date.after(startDate) && date.before(stopDate)) {
+            if(type == Type.CHILD) {
+                this.childNumber++;
+            }else {
+                this.adultNumber++;
+            }
+
+        }
+    }
+
     public void clearAdults() {
         setAdultNumber(0);
     }
