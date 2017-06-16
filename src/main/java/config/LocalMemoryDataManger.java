@@ -16,6 +16,10 @@ public class LocalMemoryDataManger implements RaportManager, BucketManager {
     }
 
     public List<Bucket> getAllBackets() {
-        return null;
+        return allBuckets;
+    }
+
+    public void clearAllBackets() {
+
     }
 }

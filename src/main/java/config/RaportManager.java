@@ -7,4 +7,5 @@ import java.util.List;
  */
 public interface RaportManager {
     List<Bucket> getAllBackets();
+    void clearAllBackets();
 }

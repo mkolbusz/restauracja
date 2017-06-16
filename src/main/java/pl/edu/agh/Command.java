@@ -6,9 +6,9 @@ package pl.edu.agh;
 public interface Command {
     String getKey();
 
-    default boolean canExecute(String input) {
-        return getKey().equals(input);
-    }
+//    default boolean canExecute(String input) {
+//        return getKey().equals(input);
+//    }
 
     boolean execute();
 }
