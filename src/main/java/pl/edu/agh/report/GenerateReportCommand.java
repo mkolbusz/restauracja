@@ -12,8 +12,9 @@ import java.util.List;
 
 public class GenerateReportCommand implements Command {
     private RaportManager reportManager;
+    private File dir;
 
-    public GenerateReportCommand(RaportManager reportManager) {
+    public GenerateReportCommand(RaportManager reportManager, File dir) {
         this.reportManager = reportManager;
     }
 
@@ -33,7 +34,7 @@ public class GenerateReportCommand implements Command {
     private void writeReportFile(Date generationDate, String report) {
         FileWriter writer = null;
         try {
-            writer = new FileWriter(new File("report_" + generationDate + ".txt"));
+            writer = new FileWriter(new File(dir, "report_" + generationDate + ".txt"));
             writer.write(report);
         } catch (IOException e) {
             e.printStackTrace();
