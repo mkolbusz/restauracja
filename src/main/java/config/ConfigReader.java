@@ -1,3 +1,5 @@
+package config;
+
 import com.sun.media.sound.InvalidDataException;
 import config.Bucket;
 import config.LocalMemoryDataManger;

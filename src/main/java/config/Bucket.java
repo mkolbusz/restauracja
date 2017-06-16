@@ -61,4 +61,17 @@ public class Bucket {
 
         }
     }
+
+    public void clearAdults() {
+        setAdultNumber(0);
+    }
+
+    public void clearChilds() {
+        setChildNumber(0);
+    }
+
+    public void clearAll() {
+        clearAdults();
+        clearChilds();
+    }
 }

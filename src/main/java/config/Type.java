@@ -3,6 +3,6 @@ package config;
 /**
  * Created by mkolbusz on 16.06.17.
  */
-enum Type {
+public enum Type {
     CHILD, ADULT
 }
